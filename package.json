@@ -22,7 +22,7 @@
   },
   "scripts": {
     "release": "gulp build && gulp prepare-release && gulp export",
-    "jspm:install": "jspm install",
+    "jspm:install": "jspm install -y",
     "build": "gulp build",
     "watch": "gulp watch",
     "bundle": "gulp bundle",
