@@ -1,6 +1,6 @@
 {
   "name": "aurelia-skeleton-navigation-typescript",
-  "version": "1.0.0-beta.3.0.1",
+  "version": "1.0.3",
   "description": "A starter kit for building a standard navigation-style app with Aurelia and TypeScript.",
   "keywords": [
     "aurelia",
@@ -21,8 +21,11 @@
     "url": "http://github.com/aurelia/skeleton-navigation-typescript"
   },
   "scripts": {
+    "release": "gulp build && gulp prepare-release && gulp export",
+    "jspm:install": "jspm install",
     "build": "gulp build",
     "watch": "gulp watch",
+    "bundle": "gulp bundle",
     "postinstall": "./node_modules/.bin/typings install",
     "test": "gulp test",
     "e2e": "gulp serve e2e"
@@ -37,6 +40,7 @@
     "gulp": "^3.9.1",
     "gulp-bump": "^2.1.0",
     "gulp-changed": "^1.3.0",
+    "gulp-cli": "^1.2.2",
     "gulp-htmlmin": "^2.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
@@ -46,7 +50,7 @@
     "gulp-typescript": "^2.13.6",
     "isparta": "^4.0.0",
     "jasmine-core": "^2.4.1",
-    "jspm": "^0.16.15",
+    "jspm": "^0.16.39",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
@@ -55,7 +59,8 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.1",
     "systemjs": "0.19.31",
-    "tslint": "^3.11.0",
+    "tsc": "^1.20150623.0",
+    "tslint": "^3.13.0",
     "typescript": "^2.0.0",
     "typings": "^1.3.0",
     "vinyl-paths": "^2.1.0",
