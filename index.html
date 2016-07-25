@@ -1,48 +1,32 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>Tokul Massage Snoqualmie</title>
+    <!--The FontAwesome version is locked at 4.6.3 in the package.json file to keep this from breaking.-->
+    <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description=" content="Atma's Massage Snoqualmie, WA. Atma Kramer, proprietor. Upper Snoqualmie Valley's favorite massage therapist.">
+  </head>
 
-<head>
-    <title>Hello, tokul massage</title>
-    <style>
-        html {
-            background: url("/public/bg.jpg") no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        body {
-            /*background: #4b6cb7;
-background: -webkit-linear-gradient(to bottom, #4b6cb7 , #182848);
-background: linear-gradient(to bottom, #4b6cb7 , #182848);*/
-            text-align: center;
-            color: blue;
-        }
-
-        .page-wrap {
-            width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            -moz-box-shadow: 0 0 20px black;
-            -webkit-box-shadow: 0 0 20px black;
-            box-shadow: 0 0 20px black;
-        }
-
-        p {
-            font: 15px/2 Georgia, Serif;
-            margin: 0 0 30px 0;
-            text-indent: 40px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="page-wrap">
-    <h1>Tokul Massage</h1>
-    <img src=" public/animated-under-construction-image-0006.gif " alt="Under construction! " />
-    <h3>Atma Kramer, LMP</h3>
+  <body aurelia-app="main">
+    <div class="splash">
+      <div class="message">Loading...</div>
+      <i class="fa fa-spinner fa-spin"></i>
     </div>
-</body>
 
+    <!-- The bluebird version is locked at 4.6.3 in the package.json file to keep this from breaking -->
+    <!-- We include bluebird to bypass Edge's very slow Native Promise implementation. The Edge team -->
+    <!-- has fixed the issues with their implementation with these fixes being distributed with the  -->
+    <!-- Windows 10 Anniversary Update on 2 August 2016. Once that update has pushed out, you may    -->
+    <!-- consider removing bluebird from your project and simply using native promises if you do     -->
+    <!-- not need to support Internet Explorer.                                                      -->
+    <script src="jspm_packages/npm/bluebird@3.4.1/js/browser/bluebird.min.js"></script>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('aurelia-bootstrapper');
+    </script>
+  </body>
 </html>
