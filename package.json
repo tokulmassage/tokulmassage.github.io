@@ -24,6 +24,7 @@
     "release": "gulp build && gulp prepare-release && gulp export",
     "jspm:install": "jspm install -y",
     "build": "gulp build",
+    "build:css" : "gulp build-css & gulp copy-bootstrap",
     "watch": "gulp watch",
     "bundle": "gulp bundle",
     "postinstall": "./node_modules/.bin/typings install",
